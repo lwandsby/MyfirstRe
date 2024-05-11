@@ -20,7 +20,7 @@ def main():
     print('当前你的金豆数量为：%d个'%money)
     while 1:
         data1 = []
-        for i in range(6):
+        for i in range(3):
             n = random.choice([0,1])
             data1.append(n)
         if int(money) < 2:
@@ -44,11 +44,11 @@ def main():
                 money = money - j *2
                 print('购买成功，当前您的金豆数量为: %d个,祝您好运！'%money)
                 break
-        print('提示：中奖号码有六位数，每位数为0或者1')
-        n2 = input('请输入你的六位数号码：（输入的号码为0或者1）')
-        while len(n2) !=6:
-            print('输入错误请重新输入六位数号码')
-            n2 = input('请输入你的六位数号码：（输入的号码为0或者1）')
+        print('提示：中奖号码有三位数，每位数为0或者1')
+        n2 = input('请输入你的三位数号码：（输入的号码为0或者1）')
+        while len(n2) !=3:
+            print('输入错误请重新输入三位数号码')
+            n2 = input('请输入你的三位数号码：（输入的号码为0或者1）')
         else:
             pass
 
@@ -62,7 +62,7 @@ def main():
         if f3 == str(data1):
             print('中奖号码为：',data1)
             print('恭喜你中大奖啦!!!')
-            money = money + j*100
+            money = money + j*50
             print('当前你的金豆数量为%d个'%money)
         else:
             print('中奖号码为',data1)
